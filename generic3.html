@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BookJuckBookJuck_Detail</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h3>프로젝트 상세</h3>
+				<nav>
+					<ul>
+						<li><a href="index.html"><h3>Home</h3></a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">BookJuck BookJuck (온라인서점)</h1>
+							
+							<a href="https://github.com/hyunwooDEV/bookjuck" target="_blank"><img src="images/github.png" style="width:50px; position: relative; top:18px;">https://github.com/hyunwooDEV/bookjuck</a>
+							<p>2021.01.28 ~ 2021.03.03<br>#Java  #JavaScript  #Oracle  #JDBC  #Servlet/Jsp  #HTML5/CSS3</p>
+
+							<p><h3>팀 프로젝트 목표</h3></p>
+							<p>
+							알라딘, YES24, 영풍문고와 같은 대형 온라인서점이 보유한 기능 80% 이상,
+							<br>외 새로운 기능 추가구현을 목표로 했습니다.
+							</p>
+							
+							<p><h3>데이터 구조</h3></p>
+
+							<img src="images/DB2.PNG" alt="" style="width: 900px; height:500px;" class="console"/>
+							
+							<!-- <span class="image fit"><img src="images/bookjuckSummary.png" alt="" style="width: 1430px; height:1824px;"/></span> -->
+							<p><h3>담당파트</h3></p>						
+							
+							<ol>
+								<li>
+									도서 검색 & 실시간 검색순위
+								  <ul>
+									<li>도서검색 : 도서명, 작가명, 도서 종류별 카테고리로 검색 할 수 있다.</li>
+									# 검색창입력값, 검색창 카테고리값을 서블릿에서 parameter로 받은 뒤 DAO->DB 연결, 
+									<br>DTO를 저장한 arrayList 배열값을 setAttribute하고 jsp로 전달하여 구현했습니다.
+									<br>
+									<br>
+									<li>실시간 검색순위 : 실시간 검색어 순위를 조회 할 수 있다.</li>
+									# 검색어 입력시 검색어가 DB에 insert 되고 count 기준 rank가 순서대로 정렬된 값을 select 되도록 View을 작성하여 구현했습니다.
+									
+								  </ul>
+								</li>	
+								<img src="images/func1.PNG" alt="" style="width: 700px; height:500px;" class="console"/>
+								<li>
+									회원별 추천도서 List
+								  <ul>
+									<li>추천도서 : 로그인한 회원의 관심카테고리와 일치하는 도서list를 보여줄 수 있다.</li>
+									# 회원, 관심사, 도서 카테고리 테이블을 join하여 회원별 관심사와 매칭되는 도서가 select 되도록 구현했습니다
+									<li>베스트도서 : 가장 많이 판매된 도서의 list를 보여줄 수 있다.</li>
+									<li>화제의신간 : 가장 최근발행된 도서의 list를 보여줄 수 있다.</li>
+								  </ul>
+								</li>
+								<img src="images/func2.PNG" alt="" style="width: 500px; height:350px;" class="console"/>
+								
+								
+								
+
+								<li>
+									베스트셀러 판매
+								  <ul>
+									<li>베스트셀러 : 도서 카테고리, 조회기간 기준 판매량에 따라 1~10순위 노출영역을 달리하여 list를 보여줄 수 있다.</li>
+									#도서를 판매량순 1순위, 2~4순위, 5~10순위로 배열을 나누어 담아 노출영역을 달리하여 구현했습니다.
+								  </ul>
+								</li>
+								<img src="images/func3.PNG" alt="" style="width: 700px; height:500px;" class="console"/>	
+								
+								<li>
+									신간도서 판매
+								  <ul>
+									<li>신간도서 : 도서 카테고리, 출간일에 따라 1~10순위 노출영역을 달리하여 list를 보여줄 수 있다.</li>
+									#도서를 발행일순 1순위, 2~4순위, 5~10순위로 배열을 나누어 담아 노출영역을 달리했습니다.
+									
+								  </ul>
+								</li>
+								<img src="images/func4.PNG" alt="" style="width: 700px; height:500px;" class="console"/>	
+
+								<li>
+									통계
+								  <ul>
+									<li>매출 Data : 판매채널별 매출액을 차트로 확인 할 수 있다.</li>
+									<li>고객연령대 Data : 연령대별 주문건수를 원형 차트로 확인 할 수 있다.</li>
+									<li>성별 Data : 연령대별 성별 주문건수를 원형 차트로 확인 할 수 있다.</li>
+									#필요한 데이터 테이블을 Union 하고, HighChart 를 활용했습니다.
+								  </ul>
+								</li>
+								<img src="images/func5.PNG" alt="" style="width: 700px; height:500px;" class="console"/>	
+								
+								
+							</ol>
+
+							
+							
+							<br>
+							<br>
+							<h3>프로젝트를 통해 배우고 느낀점</h3>
+							<br>
+							<p>
+						
+							<br>
+							1.
+							 프로젝트 주제로 선정된 서점은 흥미롭기도 했지만 평소 별로 이용해본 적이 없어서 생소했습니다. 온라인서점이 어떻게 책을 판매하는지, 
+							<br>고객들은 어떻게 구매하는지 프로세스 등을 익혀야 했습니다.<br> 
+
+							<br>
+							2. 
+							웹 프로젝트를 진행하면서 프로젝트 규모가 더 커졌고, 그에 따른 다양한 카테고리와 판매채널 소화를 위한 다량의 테이블 덕에 DML 작업에서 어려움을 겪었지만, 
+							이를 통해 오라클에 익숙해질 수 있었습니다.
+							<br><br>
+							3.
+							콘솔에서 벗어나 웹에서 진행하게 되면서 통계, 검색, 실시간 검색어 순위 등 보다 다양한 기능을 어떻게 구현할지 고민하고 
+							<br>직접 구현해보면서 많은 도움이 되었습니다.
+							<br>
+							<br>
+							4.
+							프로젝트 기간 대부분을 비대면으로 진행하면서 대면으로 진행할 때보다 어렵고 불편한점이 많았지만, 
+							<br>팀장님께서 잘 이끌어주시고 조원들도 서로 도와가면서 원만하게 소통 및 정리가 잘 이루어졌습니다. 
+							<br>덕분에 마감기한내에 마무리되어 함께 프로젝트를 진행한 팀장님과 조원들께 감사합니다.
+							<br>
+
+							
+
+
+
+							
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
